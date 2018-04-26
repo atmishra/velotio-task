@@ -1,11 +1,9 @@
-from django.shortcuts import render
-
 # Create your views here.
 from rest_framework.generics import ListCreateAPIView, ListAPIView
 
 from mytweepy.core.models import Account, Tweet
-from .tasks import fetch_tweets_task
 from mytweepy.core.serializers import AccountSerializer, TweetSerializer
+from .tasks import fetch_tweets_task
 
 
 class AccountListCreateView(ListCreateAPIView):
