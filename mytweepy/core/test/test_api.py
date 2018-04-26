@@ -52,6 +52,9 @@ class TestAccountAPI(APITestCase):
 
 
 class TestTweetAPI(APITestCase):
+    """
+    Test the /accounts/:account_id/tweets endpoint
+    """
     def setUp(self):
         self.account = Account.objects.create(screen_name='random')
         self.url = reverse('ListTweets', kwargs=dict(account_id=self.account.id))
