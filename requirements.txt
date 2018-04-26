@@ -1,0 +1,25 @@
+# Core
+Django==1.11.7
+django-configurations==2.0
+gunicorn==19.7.1
+newrelic==3.2.0.91
+
+# For the persistence stores
+psycopg2-binary==2.7.4
+dj-database-url==0.5.0
+
+# Rest apis
+djangorestframework==3.8.2
+django-filter==1.1.0
+
+
+# Testing
+mock==2.0.0
+factory-boy==2.10.0
+django-nose==1.4.5
+nose-progressive==1.5.1
+coverage==4.5.1
+
+# Twitter API SDK
+tweepy==3.6.0
+
