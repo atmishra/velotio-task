@@ -23,3 +23,11 @@ coverage==4.5.1
 # Twitter API SDK
 tweepy==3.6.0
 
+# Async Tasks
+celery==4.1.0
+django-celery-beat==1.1.1
+django-celery-results==1.0.1
+
+# Message Q
+redis==2.10.6
+

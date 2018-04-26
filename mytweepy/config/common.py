@@ -21,6 +21,8 @@ class Common(Configuration):
         # Third party apps
         'rest_framework',            # utilities for rest apis
         'django_filters',            # for filtering rest endpoints
+        'django_celery_beat',
+        'django_celery_results',
 
         # # Your apps
         'mytweepy.core'
@@ -207,3 +209,11 @@ class Common(Configuration):
             'rest_framework.filters.OrderingFilter',
         )
     }
+
+    # Celery Settings
+    CELERY_BROKER_URL = 'redis://localhost:6379'
+    CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+    CELERY_ACCEPT_CONTENT = ['application/json']
+    CELERY_TASK_SERIALIZER = 'json'
+    CELERY_RESULT_SERIALIZER = 'json'
+    CELERY_TIMEZONE = TIME_ZONE
